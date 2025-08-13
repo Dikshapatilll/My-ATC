@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system using Atlas Copco Group colors.
+   All colors are in HSL.
+*/
+
+@layer base {
+  :root {
+    /* Background and Foreground */
+    --background: linear-gradient(135deg, hsl(188 93% 18%) 0%, hsl(0, 72%, 7%) 100%);
+    --foreground: 220 14% 15%; /* A soft dark gray for text */
+
+    /* Cards, Popovers */
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 15%;
+
+    /* Primary Colors */
+    --primary: 188 93% 18%;           /* Atlas Copco Teal */
+    --primary-foreground: 0 0% 100%;  /* White text on teal */
+
+    --secondary: 220 14% 67%;         /* Atlas Copco Gray */
+    --secondary-foreground: 0 0% 15%; /* Dark text on gray */
+
+    /* Muted and Accent */
+    --muted: 220 14% 67%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 35 66% 69%;             /* Gold */
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 5 69% 45%;         /* Brick red */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders, Inputs, Rings */
+    --border: 220 14% 85%;
+    --input: 220 14% 85%;
+    --ring: 188 93% 18%;
+
+    /* Dashboard Specific */
+    --chart-primary: 188 93% 18%;     /* Teal */
+    --chart-secondary: 145 35% 46%;   /* Grass Green */
+    --chart-accent: 35 66% 69%;       /* Gold */
+    --chart-warning: 5 69% 45%;       /* Brick red */
+    --chart-info: 218 71% 25%;        /* Accent Blue */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(188 93% 18%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 66% 69%) 0%, hsl(0 0% 100%) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 14% 25%;
+    --sidebar-primary: 188 93% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 66% 69%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 220 14% 85%;
+    --sidebar-ring: 188 93% 18%;
+  }
+
+  .dark {
+    --background: 218 30% 10%;
+    --foreground: 0 0% 100%;
+
+    --card: 218 30% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 218 30% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 188 93% 18%;
+
+    --secondary: 218 20% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 218 20% 25%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 35 66% 69%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 5 69% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 218 20% 25%;
+    --input: 218 20% 25%;
+    --ring: 188 93% 40%;
+
+    --sidebar-background: 220 14% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 188 93% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 66% 69%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 220 14% 25%;
+    --sidebar-ring: 188 93% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-image: var(--background);
+    color: hsl(var(--foreground));
+  }
+}
